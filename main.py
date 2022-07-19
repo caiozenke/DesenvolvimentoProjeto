@@ -3,16 +3,16 @@ from pygame.locals import *
 import os
 py.init()
 
-altura = 1000
 largura = 1000
+altura = 1000
 diretorio_principal = os.path.dirname(__file__)
 diretorio_imagens = os.path.join(diretorio_principal , 'img')
-tela = py.display.set_mode((altura,largura))
+tela = py.display.set_mode((largura,altura))
 py.display.set_caption('C-R (COUNTERUN)')
 
 # define alguumas variaveis do jogo
 
-bloco_tam = 200
+bloco_tam = 125
 
 
 
@@ -29,7 +29,7 @@ bloco_img = py.image.load(os.path.join(diretorio_imagens, 'sky.png')).convert_al
 
 
 def linhas_brancas():
-	for linha in range(0,6):
+	for linha in range(0,10):
 		py.draw.line(tela, (255, 255, 255), (0, linha * bloco_tam), (largura, linha * bloco_tam))
 		py.draw.line(tela, (255, 255, 255), (linha * bloco_tam, 0), (linha * bloco_tam, altura))
         #so pra eu me achar na lista
