@@ -1,4 +1,4 @@
-#antigo
+#Usar este para entregar pegar o link
 import pygame as py
 from pygame.locals import *
 
